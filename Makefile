@@ -34,7 +34,8 @@ ifeq ($(OS),Windows_NT)
 	MACHINETYPE ?= $(PROCESSOR_ARCHITECTURE)
 else
 	OSTYPE ?= $(shell uname -s)
-	MACHINETYPE ?= $(shell uname -m)
+	MACHINETYPE ?= "mips"
+	#MACHINETYPE ?= $(shell uname -m)
 	build.level = $(shell date)
 endif # OS
 ifeq ($(OSTYPE),linux)
